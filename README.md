@@ -1,10 +1,6 @@
 # GitHub Activity Stream Widget
 
-This is a small Javascript plugin that creates a stream of your recent GitHub activity. It displays the user's name, username, photo, and a list of each individual activity type. Click [here](https://caseyscarborough.github.io/github-activity) for a demo.
-
-A sample image of the activity stream is shown below:
-
-![](https://raw.githubusercontent.com/caseyscarborough/github-activity/gh-pages/images/matz.png)
+This is a small Javascript plugin that creates a stream of your recent GitHub activity. It displays the user's name, username, photo, and a list of each individual activity type. Click [here](https://NateShoffner.github.io/github-activity) for a demo.
 
 ## Dependencies
 
@@ -18,7 +14,7 @@ The two dependencies for the plugin are the [Mustache](https://github.com/janl/m
 <script type="text/javascript" src="github-activity-0.1.4.min.js"></script>
 ```
 
-The files can be downloaded from the [releases page](https://github.com/caseyscarborough/github-activity/releases).
+The files can be downloaded from the [releases page](https://github.com/NateShoffner/github-activity/releases).
 
 If you'd like to build the files yourself:
 
@@ -28,7 +24,7 @@ npm install bower
 npm install grunt-cli
 
 # Clone the repository
-git clone https://github.com/caseyscarborough/github-activity.git
+git clone https://github.com/NateShoffner/github-activity.git
 cd github-activity
 
 # Install dependencies
