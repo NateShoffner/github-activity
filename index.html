@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>github-activity</title>
+        <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/octicons/2.0.2/octicons.min.css">
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+        <link rel="stylesheet" href="github-activity.css">
+        <script src="https://code.jquery.com/jquery-1.11.0.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/0.7.2/mustache.min.js"></script>
+        <script type="text/javascript" src="github-activity.js"></script>
+        <style type="text/css">
+            body {
+                padding-top: 40px;
+                padding-bottom: 40px;
+                background-color: #eee;
+            }
+
+            .github-form {
+                max-width: 330px;
+                padding: 15px;
+                margin: 0 auto;
+            }
+
+            .github-form .form-control {
+                position: relative;
+                height: auto;
+                -webkit-box-sizing: border-box;
+                -moz-box-sizing: border-box;
+                box-sizing: border-box;
+                padding: 10px;
+                font-size: 16px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+
+            <div class="row">
+                <div class="col-xs-4">
+                    <form class="github-form" onsubmit="return loadFeed()">
+                        <h2 class="text-center">View GitHub Activity</h2>
+
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="username" placeholder="GitHub Username" value="NateShoffner">
+                        </div>
+
+                        <button class="btn btn-lg btn-primary btn-block" type="submit">View Activity</button>
+                    </form>
+                </div>
+                <div class="col-xs-8">
+                    <div id="github-feed"></div>
+                </div>
+            </div>
+
+        </div>
+
+        <script type="text/javascript">
+        function loadFeed() {
+            var username = document.getElementById("username").value;
+            GitHubActivity.feed({
+                username: username,
+                selector: "#github-feed",
+                limit: 5
+            });
+            return false;
+        }
+
+        loadFeed("NateShoffner");
+        </script>
+
+    </body>
+</html>
